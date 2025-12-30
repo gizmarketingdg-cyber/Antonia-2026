@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégia de Conteúdo 2026 - Antônia Teodoro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background: linear-gradient(135deg, #f5f3f0 0%, #e8e4df 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        
+        .section {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .section-title {
+            color: #8B4513;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #A0522D;
+            font-weight: 400;
+        }
+        
+        .arquetipo-card {
+            background: linear-gradient(135deg, #2c5f6f 0%, #1a424e 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .arquetipo-card h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .percentage {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.8em;
+        }
+        
+        .progress-bar {
+            background: rgba(255,255,255,0.2);
+            height: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+        
+        .progress-fill {
+            background: #f4a460;
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+        
+        .caracteristicas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .caracteristica-tag {
+            background: rgba(255,255,255,0.15);
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 0.95em;
+        }
+        
+        .insights-box {
+            background: #fef9f3;
+            border-left: 5px solid #8B4513;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .insights-box h4 {
+            color: #8B4513;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .color-item {
+            text-align: center;
+        }
+        
+        .color-swatch {
+            width: 100%;
+            height: 100px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .color-name {
+            font-weight: 600;
+            color: #2c2c2c;
+            margin-bottom: 5px;
+        }
+        
+        .color-code {
+            font-size: 0.85em;
+            color: #666;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .serie-card {
+            background: #f8f6f3;
+            border: 2px solid #e0d8ce;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .serie-card:hover {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        
+        .serie-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .serie-number {
+            background: #8B4513;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .serie-title {
+            color: #8B4513;
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        
+        .serie-description {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .serie-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95em;
+        }
+        
+        .meta-label {
+            font-weight: 600;
+            color: #8B4513;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .calendar-day {
+            background: white;
+            border: 2px solid #e0d8ce;
+            padding: 15px;
+            border-radius: 10px;
+            min-height: 120px;
+            position: relative;
+        }
+        
+        .calendar-day.header {
+            background: #8B4513;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            min-height: auto;
+        }
+        
+        .day-number {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 8px;
+        }
+        
+        .post-indicator {
+            background: #2c5f6f;
+            color: white;
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-size: 0.75em;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+        
+        .post-indicator.reels {
+            background: #c13584;
+        }
+        
+        .post-indicator.carrossel {
+            background: #405de6;
+        }
+        
+        .post-indicator.post {
+            background: #5b51d8;
+        }
+        
+        .estrategia-box {
+            background: linear-gradient(135deg, #2c5f6f 0%, #1a424e 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 25px 0;
+        }
+        
+        .estrategia-box h4 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .estrategia-box ul {
+            list-style: none;
+        }
+        
+        .estrategia-box li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .estrategia-box li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #f4a460;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0d8ce;
+        }
+        
+        th {
+            background: #8B4513;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #fef9f3;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f4a460 0%, #d4834f 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        
+        .highlight-box h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        .nr1-badge {
+            background: #c13584;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .calendar-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ESTRATÉGIA DE CONTEÚDO 2026</h1>
+            <div class="subtitle">Antônia Teodoro dos Santos</div>
+            <div class="subtitle" style="font-size: 1em; margin-top: 10px; opacity: 0.85;">
+                Análise de Perfil Comportamental & Planejamento Estratégico Corporativo
+            </div>
+        </div>
+
+        <!-- ANÁLISE DE ARQUÉTIPOS -->
+        <div class="section">
+            <h2 class="section-title">🎯 Análise de Perfil Comportamental</h2>
+            
+            <div class="arquetipo-card">
+                <h3>
+                    MAGO - Arquétipo Dominante
+                    <span class="percentage">25%</span>
+                </h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 25%;"></div>
+                </div>
+                <p style="margin-bottom: 15px; font-size: 1.1em; line-height: 1.8;">
+                    O Mago é o arquétipo da <strong>transformação, visão estratégica e capacidade de mudança</strong>. 
+                    É o profissional que compreende os padrões comportamentais profundos e usa esse conhecimento 
+                    para criar mudanças consistentes e sustentáveis.
+                </p>
+                <div class="caracteristicas">
+                    <div class="caracteristica-tag">✨ Transformação</div>
+                    <div class="caracteristica-tag">🎯 Visão estratégica</div>
+                    <div class="caracteristica-tag">🧠 Expertise profunda</div>
+                    <div class="caracteristica-tag">🔄 Processos de mudança</div>
+                    <div class="caracteristica-tag">💡 Insights comportamentais</div>
+                </div>
+            </div>
+
+            <div class="insights-box">
+                <h4>💡 Por que o Mago é perfeito para Antônia?</h4>
+                <p style="line-height: 1.8;">
+                    A trajetória de Antônia demonstra o perfil do Mago: ela enfrentou desafios sérios de saúde mental 
+                    (depressão, ansiedade e síndrome do pânico), investiu profundamente em conhecimento especializado 
+                    (20+ formações), aplicou esse aprendizado na própria transformação e hoje utiliza essa expertise 
+                    para ajudar outras pessoas. Ela não apenas estudou os processos de mudança comportamental — 
+                    <strong>ela viveu e domina esses processos na prática</strong>.
+                </p>
+                <p style="margin-top: 15px; line-height: 1.8;">
+                    No contexto corporativo, o Mago é quem <strong>identifica as causas reais</strong> dos problemas 
+                    organizacionais, não apenas os sintomas aparentes. Enquanto outros profissionais oferecem ações 
+                    pontuais, o Mago oferece <strong>estratégias de transformação estrutural e duradoura</strong>.
+                </p>
+            </div>
+
+            <div class="arquetipo-card" style="background: linear-gradient(135deg, #6b8e9a 0%, #4d6b75 100%);">
+                <h3>
+                    CARA COMUM - Arquétipo Secundário
+                    <span class="percentage">17%</span>
+                </h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 17%;"></div>
+                </div>
+                <p style="margin-bottom: 15px; font-size: 1.1em; line-height: 1.8;">
+                    O Cara Comum busca <strong>conexão genuína, pertencimento e igualdade</strong>. 
+                    Rejeita superioridade e elitismo. Valoriza autenticidade, vulnerabilidade e acessibilidade.
+                </p>
+                <div class="caracteristicas">
+                    <div class="caracteristica-tag">🤝 Inclusão</div>
+                    <div class="caracteristica-tag">⚖️ Igualdade</div>
+                    <div class="caracteristica-tag">🏠 Pertencimento</div>
+                    <div class="caracteristica-tag">👥 Comunidade</div>
+                    <div class="caracteristica-tag">💕 Amizade</div>
+                </div>
+            </div>
+
+            <div class="insights-box">
+                <h4>💡 Como o Cara Comum humaniza o Mago?</h4>
+                <p style="line-height: 1.8;">
+                    Esse arquétipo secundário impede que Antônia seja vista como <strong>inatingível ou superior</strong>. 
+                    Ela não se coloca acima das pessoas — ela se coloca <strong>ao lado</strong>. Por isso sua comunicação 
+                    funciona: <em>"Eu estive quebrada como você está agora. Eu sei o que é isso. E se eu saí, você também pode."</em>
+                </p>
+                <p style="margin-top: 15px; line-height: 1.8;">
+                    No ambiente corporativo, isso se traduz em <strong>linguagem acessível</strong>, ausência de jargões 
+                    intimidadores e capacidade de conectar com todos os níveis hierárquicos — da recepção ao C-level.
+                </p>
+            </div>
+
+            <div class="arquetipo-card" style="background: linear-gradient(135deg, #8a7355 0%, #6b5940 100%);">
+                <h3>
+                    GOVERNANTE - Arquétipo Terciário
+                    <span class="percentage">8%</span>
+                </h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 8%;"></div>
+                </div>
+                <p style="margin-bottom: 15px; font-size: 1.1em; line-height: 1.8;">
+                    O Governante busca <strong>ordem, controle, liderança e criação de estruturas sustentáveis</strong>. 
+                    Pensa sistemicamente e entende que resultados dependem de processos bem construídos.
+                </p>
+                <div class="caracteristicas">
+                    <div class="caracteristica-tag">👑 Liderança</div>
+                    <div class="caracteristica-tag">🎯 Autoridade</div>
+                    <div class="caracteristica-tag">📊 Ordem</div>
+                    <div class="caracteristica-tag">🎛️ Controle</div>
+                    <div class="caracteristica-tag">💼 Sucesso</div>
+                </div>
+            </div>
+
+            <div class="insights-box">
+                <h4>💡 Por que 8% de Governante é estratégico?</h4>
+                <p style="line-height: 1.8;">
+                    Esse traço pequeno, mas presente, dá a Antônia a <strong>credibilidade executiva</strong> necessária 
+                    para conversar com decisores. Ela entende gestão (12 anos como gestora de abrigo + 25 anos no serviço público), 
+                    processos, indicadores e responsabilidade institucional. Isso permite que ela não seja vista apenas como 
+                    "terapeuta sensível", mas como <strong>consultora estratégica de saúde mental corporativa</strong>.
+                </p>
+                <p style="margin-top: 15px; line-height: 1.8;">
+                    É o que permite frases como: <em>"Saúde mental não é fragilidade. É gestão."</em>
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🎯 A COMBINAÇÃO PERFEITA</h3>
+                <p style="font-size: 1.2em; line-height: 1.7; margin-top: 15px;">
+                    <strong>Mago (25%)</strong> traz o poder de transformação profunda<br>
+                    <strong>Cara Comum (17%)</strong> traz a humanização e acessibilidade<br>
+                    <strong>Governante (8%)</strong> traz a estrutura e credibilidade corporativa
+                </p>
+                <p style="margin-top: 20px; font-size: 1.1em; opacity: 0.95;">
+                    Resultado: Uma profissional que <strong>transforma de verdade</strong>, 
+                    <strong>sem se colocar como superior</strong> e com <strong>compreensão estratégica do ambiente corporativo</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- PALETA DE CORES POR ARQUÉTIPO -->
+        <div class="section">
+            <h2 class="section-title">🎨 Paleta de Cores Estratégica</h2>
+            
+            <h3 style="color: #8B4513; margin: 30px 0 20px 0; font-size: 1.6em;">Cores do MAGO (Dominante)</h3>
+            <p style="margin-bottom: 20px; line-height: 1.7;">
+                O Mago usa cores que evocam <strong>profundidade, expertise, transformação e confiança profissional</strong>. 
+                São cores que sugerem conhecimento especializado e resultados consistentes.
+            </p>
+            
+            <div class="color-palette">
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #2c3e50;"></div>
+                    <div class="color-name">Azul Profundo</div>
+                    <div class="color-code">#2c3e50</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Expertise, confiança</small>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #6b46a8;"></div>
+                    <div class="color-name">Roxo Profissional</div>
+                    <div class="color-code">#6b46a8</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Transformação, inovação</small>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #2c5f6f;"></div>
+                    <div class="color-name">Teal Corporativo</div>
+                    <div class="color-code">#2c5f6f</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Equilíbrio, estratégia</small>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #1a1a2e;"></div>
+                    <div class="color-name">Azul Escuro Executivo</div>
+                    <div class="color-code">#1a1a2e</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Seriedade, autoridade</small>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #d4af37;"></div>
+                    <div class="color-name">Dourado</div>
+                    <div class="color-code">#d4af37</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Excelência, valor</small>
+                </div>
+            </div>
+
+            <h3 style="color: #8B4513; margin: 40px 0 20px 0; font-size: 1.6em;">Cores do CARA COMUM (Secundário)</h3>
+            <p style="margin-bottom: 20px; line-height: 1.7;">
+                O Cara Comum usa cores <strong>acessíveis, acolhedoras e calorosas</strong>. 
+                São cores que convidam, que não intimidam, que criam sensação de segurança e pertencimento.
+            </p>
+            
+            <div class="color-palette">
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #A0522D;"></div>
+                    <div class="color-name">Terra/Terracota</div>
+                    <div class="color-code">#A0522D</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Acolhimento, raiz</small>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #8B4513;"></div>
+                    <div class="color-name">Marrom Quente</div>
+                    <div class="color-code">#8B4513</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Confiança, estabilidade</small>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #d4a574;"></div>
+                    <div class="color-name">Bege Caramelo</div>
+                    <div class="color-code">#d4a574</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Suavidade, calor</small>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #f5f3f0;"></div>
+                    <div class="color-name">Off-White/Creme</div>
+                    <div class="color-code">#f5f3f0</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Clareza, simplicidade</small>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #6b8e9a;"></div>
+                    <div class="color-name">Azul Acinzentado</div>
+                    <div class="color-code">#6b8e9a</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Tranquilidade, equilíbrio</small>
+                </div>
+            </div>
+
+            <h3 style="color: #8B4513; margin: 40px 0 20px 0; font-size: 1.6em;">Cores do GOVERNANTE (Terciário)</h3>
+            <p style="margin-bottom: 20px; line-height: 1.7;">
+                O Governante usa cores que transmitem <strong>autoridade, sucesso, controle e excelência</strong>. 
+                São cores que inspiram respeito e confiança corporativa.
+            </p>
+            
+            <div class="color-palette">
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #1a424e;"></div>
+                    <div class="color-name">Azul Marinho Profundo</div>
+                    <div class="color-code">#1a424e</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Autoridade, confiança</small>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #2c2c2c;"></div>
+                    <div class="color-name">Grafite</div>
+                    <div class="color-code">#2c2c2c</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Sofisticação, poder</small>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #8a7355;"></div>
+                    <div class="color-name">Bronze/Cobre</div>
+                    <div class="color-code">#8a7355</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Luxo sóbrio, qualidade</small>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background: #ffffff;"></div>
+                    <div class="color-name">Branco Absoluto</div>
+                    <div class="color-code">#ffffff</div>
+                    <small style="display: block; margin-top: 5px; color: #666;">Clareza, ordem</small>
+                </div>
+            </div>
+
+            <div class="insights-box" style="margin-top: 40px;">
+                <h4>🎨 PALETA HÍBRIDA RECOMENDADA PARA ANTÔNIA</h4>
+                <p style="line-height: 1.8; margin-bottom: 15px;">
+                    Combinando os 3 arquétipos, a paleta ideal para o posicionamento corporativo de Antônia em 2026:
+                </p>
+                <div class="color-palette">
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: #2c5f6f;"></div>
+                        <div class="color-name">Principal: Teal Profundo</div>
+                        <div class="color-code">#2c5f6f</div>
+                        <small style="display: block; margin-top: 5px; color: #666;">(Mago - transformação)</small>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: #A0522D;"></div>
+                        <div class="color-name">Secundária: Terra</div>
+                        <div class="color-code">#A0522D</div>
+                        <small style="display: block; margin-top: 5px; color: #666;">(Cara Comum - acolhimento)</small>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: #1a424e;"></div>
+                        <div class="color-name">Acento: Azul Corporativo</div>
+                        <div class="color-code">#1a424e</div>
+                        <small style="display: block; margin-top: 5px; color: #666;">(Governante - autoridade)</small>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: #f5f3f0;"></div>
+                        <div class="color-name">Base: Off-White</div>
+                        <div class="color-code">#f5f3f0</div>
+                        <small style="display: block; margin-top: 5px; color: #666;">(Neutralidade, respiro)</small>
+                    </div>
+                    <div class="color-item">
+                        <div class="color-swatch" style="background: #d4af37;"></div>
+                        <div class="color-name">Destaque: Dourado</div>
+                        <div class="color-code">#d4af37</div>
+                        <small style="display: block; margin-top: 5px; color: #666;">(Valor, iluminação)</small>
+                    </div>
+                </div>
+                <p style="margin-top: 25px; line-height: 1.8; font-style: italic; color: #555;">
+                    <strong>Uso prático:</strong> Fundos em off-white, títulos em teal profundo, CTAs em terra/terracota, 
+                    elementos corporativos em azul marinho, destaques pontuais em dourado.
+                </p>
+            </div>
+        </div>
+
+        <!-- POSICIONAMENTO ESTRATÉGICO -->
+        <div class="section">
+            <h2 class="section-title">🎯 Posicionamento Estratégico 2026</h2>
+            
+            <div class="estrategia-box">
+                <h4>🎭 Como os Arquétipos Definem o Posicionamento</h4>
+                <p style="margin-bottom: 20px; line-height: 1.8;">
+                    O posicionamento de Antônia em 2026 não pode ser genérico. Precisa refletir 
+                    a combinação única de seus arquétipos para criar diferenciação real no mercado corporativo.
+                </p>
+                <ul>
+                    <li><strong>MAGO dita o "O QUÊ":</strong> Transformação real, não paliativos. Processos profundos, não eventos pontuais.</li>
+                    <li><strong>CARA COMUM dita o "COMO":</strong> Linguagem acessível, vulnerabilidade estratégica, ausência de elitismo.</li>
+                    <li><strong>GOVERNANTE dita o "ONDE":</strong> Foco em decisores, C-level, RH estratégico. Métricas claras e mensuráveis.</li>
+                </ul>
+            </div>
+
+            <h3 style="color: #8B4513; margin: 40px 0 20px 0; font-size: 1.6em;">Declaração de Posicionamento 2026</h3>
+            <div class="highlight-box">
+                <h3 style="font-size: 1.5em; margin-bottom: 15px;">
+                    "Transformação corporativa que não ignora o lado humano — <br>e não romantiza o adoecimento."
+                </h3>
+                <p style="font-size: 1.1em; line-height: 1.7; margin-top: 20px;">
+                    Antônia Teodoro não é mais "terapeuta comportamental".<br>
+                    Em 2026, ela é <strong>"Especialista em Saúde Mental Corporativa Preventiva"</strong>.
+                </p>
+                <div class="nr1-badge">NR-1 2026 COMPLIANCE</div>
+                <div class="nr1-badge">PROCESSOS SUSTENTÁVEIS</div>
+                <div class="nr1-badge">ATRAÇÃO DE PÚBLICO QUALIFICADO</div>
+            </div>
+
+            <h3 style="color: #8B4513; margin: 40px 0 20px 0; font-size: 1.6em;">Pillares do Novo Posicionamento</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pilar</th>
+                        <th>Antiga Abordagem</th>
+                        <th>Nova Abordagem 2026</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Foco</strong></td>
+                        <td>Atendimento individual B2C</td>
+                        <td>Consultoria preventiva B2B (70%) + Atendimento individual (30%)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Linguagem</strong></td>
+                        <td>Terapeuta que fala de cura</td>
+                        <td>Consultora que fala de gestão, cultura e prevenção</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Oferta</strong></td>
+                        <td>Palestras motivacionais pontuais</td>
+                        <td>Diagnóstico + Implementação + Monitoramento contínuo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diferencial</strong></td>
+                        <td>"Vivi isso"</td>
+                        <td>"Vivi isso + estudei 20+ anos + implementei em organizações reais"</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insights-box" style="margin-top: 30px;">
+                <h4>💼 Oportunidade NR-1 2026</h4>
+                <p style="line-height: 1.8;">
+                    A nova regulamentação <strong>NR-1 2026</strong> obriga empresas a implementarem programas estruturados 
+                    de saúde mental. Isso significa que o mercado vai <strong>explodir</strong> — mas também vai se encher 
+                    de profissionais despreparados oferecendo soluções superficiais.
+                </p>
+                <p style="margin-top: 15px; line-height: 1.8;">
+                    <strong>Posicionamento de Antônia:</strong> Não oferecer "palestra de Setembro Amarelo". 
+                    Oferecer <strong>diagnóstico comportamental organizacional</strong>, <strong>mapeamento de riscos emocionais</strong>, 
+                    <strong>treinamento de lideranças</strong> e <strong>implementação de cultura preventiva real</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- AS 10 SÉRIES (versão resumida para o documento completo) -->
+        <div class="section">
+            <h2 class="section-title">📺 As 10 Séries de Conteúdo 2026</h2>
+            
+            <p style="margin-bottom: 30px; line-height: 1.8; font-size: 1.1em;">
+                Cada série terá <strong>5 episódios (Reels + Carrosséis + Posts)</strong> distribuídos ao longo de 2-3 semanas.
+            </p>
+
+            <!-- Serie 1 -->
+            <div class="serie-card">
+                <div class="serie-header">
+                    <div class="serie-number">01</div>
+                    <div class="serie-title">"O que acontece em casa não fica fora da empresa"</div>
+                </div>
+                <div class="serie-description">
+                    Explora como conflitos familiares, sobrecarga emocional e papéis mal definidos impactam 
+                    diretamente produtividade, absenteísmo e conflitos no trabalho.
+                </div>
+                <div class="serie-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Arquétipo:</span> Mago + Cara Comum
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Público:</span> RH, Gestores, Colaboradores
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Objetivo:</span> Educar sobre conexão casa-trabalho
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serie 2 -->
+            <div class="serie-card">
+                <div class="serie-header">
+                    <div class="serie-number">02</div>
+                    <div class="serie-title">"O erro das empresas ao falar de saúde mental"</div>
+                </div>
+                <div class="serie-description">
+                    Desmonta ilusões comuns: palestra pontual, frase motivacional, café com psicólogo. 
+                    Posiciona Antônia como quem entende <strong>processo, não maquiagem institucional</strong>.
+                </div>
+                <div class="serie-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Arquétipo:</span> Mago + Governante
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Público:</span> Decisores, C-level, Diretores RH
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serie 3 -->
+            <div class="serie-card">
+                <div class="serie-header">
+                    <div class="serie-number">03</div>
+                    <div class="serie-title">"Funcionários não adoecem do nada"</div>
+                </div>
+                <div class="serie-description">
+                    Sinais ignorados no dia a dia: mudanças de comportamento, conflitos recorrentes, 
+                    queda silenciosa de performance. Para RH e liderança se sentirem responsabilizados sem ataque direto.
+                </div>
+            </div>
+
+            <!-- Serie 4 -->
+            <div class="serie-card">
+                <div class="serie-header">
+                    <div class="serie-number">04</div>
+                    <div class="serie-title">"Saúde mental não é fragilidade. É gestão."</div>
+                </div>
+                <div class="serie-description">
+                    Reposiciona completamente o tema para o universo executivo. Conecta emoção, 
+                    comportamento e resultado financeiro. Prepara o cérebro do decisor para investir.
+                </div>
+            </div>
+
+            <!-- Serie 5 -->
+            <div class="serie-card">
+                <div class="serie-header">
+                    <div class="serie-number">05</div>
+                    <div class="serie-title">"Famílias desorganizadas formam adultos exaustos"</div>
+                </div>
+                <div class="serie-description">
+                    Mostra como padrões aprendidos em casa aparecem no trabalho: dificuldade com autoridade, 
+                    medo de errar, excesso de responsabilidade. Fala de família sem ser terapêutica demais.
+                </div>
+            </div>
+
+            <!-- Serie 6 -->
+            <div class="serie-card">
+                <div class="serie-header">
+                    <div class="serie-number">06</div>
+                    <div class="serie-title">"O que a NR-1 vai exigir além do papel"</div>
+                </div>
+                <div class="serie-description">
+                    Sem juridiquês, sem terrorismo. Mostra que cumprir a norma não é checklist, é cultura. 
+                    Posiciona Antônia como ponte entre lei, gente e prática real.
+                </div>
+                <div class="serie-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Arquétipo:</span> Governante (ordem, compliance)
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Mês sugerido:</span> Janeiro (lançamento NR-1)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Serie 7 -->
+            <div class="serie-card">
+                <div class="serie-header">
+                    <div class="serie-number">07</div>
+                    <div class="serie-title">"Liderança emocionalmente imatura custa caro"</div>
+                </div>
+                <div class="serie-description">
+                    Conteúdo direto para gestores. Fala de controle, comunicação agressiva, omissão, favoritismo. 
+                    Altíssimo potencial de compartilhamento silencioso entre RH.
+                </div>
+            </div>
+
+            <!-- Serie 8 -->
+            <div class="serie-card">
+                <div class="serie-header">
+                    <div class="serie-number">08</div>
+                    <div class="serie-title">"Cuidado emocional não é terapia dentro da empresa"</div>
+                </div>
+                <div class="serie-description">
+                    <strong>Série ouro.</strong> Educa o mercado sobre limites, escopo e responsabilidade. 
+                    Evita objeções comuns e posiciona o trabalho de Antônia como estratégico e preventivo.
+                </div>
+            </div>
+
+            <!-- Serie 9 -->
+            <div class="serie-card">
+                <div class="serie-header">
+                    <div class="serie-number">09</div>
+                    <div class="serie-title">"Por que falar de saúde mental só quando alguém quebra é tarde demais"</div>
+                </div>
+                <div class="serie-description">
+                    Aborda prevenção real: clima, processos, cultura, liderança. 
+                    Ideal para conectar com NR-1 sem citar trauma ou crise explicitamente.
+                </div>
+            </div>
+
+            <!-- Serie 10 -->
+            <div class="serie-card">
+                <div class="serie-header">
+                    <div class="serie-number">10</div>
+                    <div class="serie-title">"O que 25 anos lidando com pessoas me ensinaram"</div>
+                </div>
+                <div class="serie-description">
+                    <strong>Série de autoridade máxima.</strong> Entra a vivência no serviço público, gestão de abrigo, 
+                    liderança e comportamento humano. É impossível de copiar — e extremamente contratável.
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 40px;">
+                <h3>📊 DISTRIBUIÇÃO DAS SÉRIES NO SEMESTRE</h3>
+                <p style="font-size: 1.1em; margin-top: 15px; line-height: 1.7;">
+                    <strong>Janeiro:</strong> Série 1 + Série 6 (aproveitando lançamento NR-1)<br>
+                    <strong>Fevereiro:</strong> Série 2 + Série 7<br>
+                    <strong>Março:</strong> Série 3 + Série 8<br>
+                    <strong>Abril:</strong> Série 4 + Série 9<br>
+                    <strong>Maio:</strong> Série 5 + Série 10<br>
+                    <strong>Junho:</strong> Revisitar séries com maior engajamento + Lançamento de oferta corporativa
+                </p>
+            </div>
+
+            <div class="insights-box" style="margin-top: 30px; background: #fff3e0; border-left: 5px solid #f57c00;">
+                <h4 style="color: #f57c00;">⚠️ Importante: Escopo do Trabalho de Marketing</h4>
+                <p style="line-height: 1.8;">
+                    O trabalho de <strong>estratégia e produção de conteúdo</strong> tem como objetivo:
+                </p>
+                <ul style="margin: 15px 0 15px 25px; line-height: 1.8;">
+                    <li>Atrair e engajar público qualificado (B2B e B2C)</li>
+                    <li>Posicionar Antônia como autoridade no nicho</li>
+                    <li>Gerar leads interessados (mensagens, comentários, salvamentos)</li>
+                    <li>Criar reconhecimento de marca</li>
+                    <li>Educar o mercado sobre os serviços oferecidos</li>
+                </ul>
+                <p style="line-height: 1.8; margin-top: 15px;">
+                    <strong>A conversão desses leads em clientes pagantes</strong> depende de:
+                </p>
+                <ul style="margin: 15px 0 15px 25px; line-height: 1.8;">
+                    <li>Processo comercial e follow-up da Antônia</li>
+                    <li>Qualidade da proposta comercial apresentada</li>
+                    <li>Precificação e condições de pagamento</li>
+                    <li>Timing e maturidade do lead</li>
+                    <li>Fit entre necessidade do cliente e oferta</li>
+                </ul>
+                <p style="line-height: 1.8; margin-top: 15px; font-weight: 600; color: #f57c00;">
+                    Por isso, as métricas deste planejamento focam em ATRAÇÃO e ENGAJAMENTO, 
+                    não em vendas fechadas. O sucesso comercial é uma parceria entre marketing 
+                    (Giz) e comercial (Antônia).
+                </p>
+            </div>
+        </div>
+
+        <!-- CALENDÁRIO JANEIRO 2026 -->
+        <div class="section">
+            <h2 class="section-title">📅 Calendário Editorial - Janeiro 2026</h2>
+            
+            <div class="estrategia-box">
+                <h4>🎯 Estratégia de Janeiro</h4>
+                <ul>
+                    <li><strong>Semana 1-2:</strong> Série 6 — "O que a NR-1 vai exigir além do papel"</li>
+                    <li><strong>Semana 3-4:</strong> Série 1 — "O que acontece em casa não fica fora da empresa"</li>
+                    <li><strong>Formatos:</strong> Mix equilibrado de Reels (35%), Carrosséis (40%), Posts únicos (25%)</li>
+                    <li><strong>Frequência:</strong> 3 posts/semana = 12 posts/mês</li>
+                </ul>
+            </div>
+
+            <div class="calendar-grid">
+                <div class="calendar-day header">DOM</div>
+                <div class="calendar-day header">SEG</div>
+                <div class="calendar-day header">TER</div>
+                <div class="calendar-day header">QUA</div>
+                <div class="calendar-day header">QUI</div>
+                <div class="calendar-day header">SEX</div>
+                <div class="calendar-day header">SÁB</div>
+
+                <!-- Semana 1 -->
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"></div>
+                <div class="calendar-day"><div class="day-number">1</div></div>
+                <div class="calendar-day"><div class="day-number">2</div></div>
+                <div class="calendar-day"><div class="day-number">3</div></div>
+                <div class="calendar-day"><div class="day-number">4</div></div>
+
+                <!-- Semana 2 -->
+                <div class="calendar-day"><div class="day-number">5</div></div>
+                <div class="calendar-day">
+                    <div class="day-number">6</div>
+                    <span class="post-indicator carrossel">CARROSSEL</span>
+                    <small>Série 6 #1: "NR-1 2026 - O que mudou"</small>
+                </div>
+                <div class="calendar-day"><div class="day-number">7</div></div>
+                <div class="calendar-day">
+                    <div class="day-number">8</div>
+                    <span class="post-indicator reels">REELS</span>
+                    <small>Série 6 #2: Papel vs cultura</small>
+                </div>
+                <div class="calendar-day"><div class="day-number">9</div></div>
+                <div class="calendar-day">
+                    <div class="day-number">10</div>
+                    <span class="post-indicator post">POST</span>
+                    <small>Série 6 #3: Casos de erro</small>
+                </div>
+                <div class="calendar-day"><div class="day-number">11</div></div>
+
+                <!-- Semana 3 -->
+                <div class="calendar-day"><div class="day-number">12</div></div>
+                <div class="calendar-day">
+                    <div class="day-number">13</div>
+                    <span class="post-indicator carrossel">CARROSSEL</span>
+                    <small>Série 6 #4: Checklist NR-1</small>
+                </div>
+                <div class="calendar-day"><div class="day-number">14</div></div>
+                <div class="calendar-day">
+                    <div class="day-number">15</div>
+                    <span class="post-indicator reels">REELS</span>
+                    <small>Série 6 #5: Como ajudar</small>
+                </div>
+                <div class="calendar-day"><div class="day-number">16</div></div>
+                <div class="calendar-day">
+                    <div class="day-number">17</div>
+                    <span class="post-indicator post">POST</span>
+                    <small>Transição: NR-1 → vida pessoal</small>
+                </div>
+                <div class="calendar-day"><div class="day-number">18</div></div>
+
+                <!-- Semana 4 -->
+                <div class="calendar-day"><div class="day-number">19</div></div>
+                <div class="calendar-day">
+                    <div class="day-number">20</div>
+                    <span class="post-indicator carrossel">CARROSSEL</span>
+                    <small>Série 1 #1: 5 conflitos familiares</small>
+                </div>
+                <div class="calendar-day"><div class="day-number">21</div></div>
+                <div class="calendar-day">
+                    <div class="day-number">22</div>
+                    <span class="post-indicator reels">REELS</span>
+                    <small>Série 1 #2: Padrão casa = trabalho</small>
+                </div>
+                <div class="calendar-day"><div class="day-number">23</div></div>
+                <div class="calendar-day">
+                    <div class="day-number">24</div>
+                    <span class="post-indicator post">POST</span>
+                    <small>Série 1 #3: Caso real</small>
+                </div>
+                <div class="calendar-day"><div class="day-number">25</div></div>
+
+                <!-- Semana 5 -->
+                <div class="calendar-day"><div class="day-number">26</div></div>
+                <div class="calendar-day">
+                    <div class="day-number">27</div>
+                    <span class="post-indicator carrossel">CARROSSEL</span>
+                    <small>Série 1 #4: Limites empresa</small>
+                </div>
+                <div class="calendar-day"><div class="day-number">28</div></div>
+                <div class="calendar-day">
+                    <div class="day-number">29</div>
+                    <span class="post-indicator reels">REELS</span>
+                    <small>Série 1 #5: RH preventivo</small>
+                </div>
+                <div class="calendar-day"><div class="day-number">30</div></div>
+                <div class="calendar-day"><div class="day-number">31</div></div>
+            </div>
+        </div>
+
+        <!-- PLANEJAMENTO 1º SEMESTRE -->
+        <div class="section">
+            <h2 class="section-title">📊 Planejamento Estratégico - 1º Semestre 2026</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mês</th>
+                        <th>Séries</th>
+                        <th>Foco Estratégico</th>
+                        <th>KPI Principal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Janeiro</strong></td>
+                        <td>Série 6 + Série 1</td>
+                        <td>Aproveitar NR-1 + Educar mercado</td>
+                        <td>Alcance + Leads B2B</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fevereiro</strong></td>
+                        <td>Série 2 + Série 7</td>
+                        <td>Desconstruir + Responsabilizar líderes</td>
+                        <td>Engajamento + Salvamentos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Março</strong></td>
+                        <td>Série 3 + Série 8</td>
+                        <td>Criar urgência + Eliminar objeções</td>
+                        <td>Mensagens Direct + Conversões</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Abril</strong></td>
+                        <td>Série 4 + Série 9</td>
+                        <td>Educação sobre valor + Posicionar benefícios</td>
+                        <td>Leads qualificados</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maio</strong></td>
+                        <td>Série 5 + Série 10</td>
+                        <td>Autoridade máxima + Humanização</td>
+                        <td>Reconhecimento de marca</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Junho</strong></td>
+                        <td>Revisita + Lançamento</td>
+                        <td>Conversão final + Fechamentos</td>
+                        <td>Contratos fechados</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box" style="margin-top: 40px;">
+                <h3>🎯 Metas de Marketing do Semestre</h3>
+                <p style="font-size: 1.3em; margin-top: 15px; line-height: 1.7;">
+                    <strong>15-25 leads B2B qualificados</strong> (empresas interessadas em palestras/consultoria)<br>
+                    <strong>+2.000 seguidores</strong> de perfil corporativo/RH<br>
+                    <strong>50.000+ impressões</strong> em público B2B
+                </p>
+                <p style="margin-top: 20px; font-size: 0.95em; opacity: 0.9;">
+                    *A conversão desses leads em contratos depende do processo comercial da Antônia
+                </p>
+            </div>
+        </div>
+
+        <!-- JUSTIFICATIVA DOS FORMATOS -->
+        <div class="section">
+            <h2 class="section-title">🎬 Por Que Esses Formatos?</h2>
+
+            <div class="arquetipo-card">
+                <h3>REELS - O Formato do MAGO</h3>
+                <p style="margin: 15px 0; line-height: 1.8;">
+                    O Mago opera através de <strong>impacto rápido e insights transformadores</strong>. 
+                    Reels são a ferramenta perfeita para criar conexão emocional instantânea, viralizar mensagens 
+                    de alto valor e capturar atenção em segundos com conteúdo relevante.
+                </p>
+            </div>
+
+            <div class="arquetipo-card" style="background: linear-gradient(135deg, #6b8e9a 0%, #4d6b75 100%);">
+                <h3>CARROSSÉIS - O Formato do GOVERNANTE</h3>
+                <p style="margin: 15px 0; line-height: 1.8;">
+                    O Governante pensa em <strong>estrutura, ordem e processos</strong>. 
+                    Carrosséis permitem organizar informações complexas de forma hierárquica e demonstrar expertise.
+                </p>
+            </div>
+
+            <div class="arquetipo-card" style="background: linear-gradient(135deg, #8a7355 0%, #6b5940 100%);">
+                <h3>POSTS ÚNICOS - O Formato do CARA COMUM</h3>
+                <p style="margin: 15px 0; line-height: 1.8;">
+                    O Cara Comum valoriza <strong>conexão genuína e narrativas pessoais</strong>. 
+                    Posts de texto longo permitem storytelling profundo e construção de intimidade.
+                </p>
+            </div>
+        </div>
+
+        <!-- PRÓXIMOS PASSOS -->
+        <div class="section">
+            <h2 class="section-title">🚀 Próximos Passos</h2>
+
+            <div class="estrategia-box">
+                <h4>📋 Checklist de Implementação</h4>
+                <ul>
+                    <li><strong>✅ APROVAÇÃO:</strong> Revisar este documento com Antônia</li>
+                    <li><strong>✅ AJUSTE CONTRATUAL:</strong> Formalizar aumento de 2 para 3 posts/semana</li>
+                    <li><strong>✅ PREPARAÇÃO VISUAL:</strong> Criar templates alinhados à paleta estratégica definida</li>
+                    <li><strong>✅ ROTEIROS COMPLETOS:</strong> Escrever todos os 12 conteúdos de Janeiro</li>
+                    <li><strong>✅ CAPTURA DE VÍDEOS:</strong> Gravar Reels de Janeiro</li>
+                    <li><strong>✅ PREPARAÇÃO NR-1:</strong> Estudar detalhes da normativa</li>
+                    <li><strong>✅ MATERIAIS CORPORATIVOS:</strong> Criar apresentação para propostas B2B</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h3>💎 Este Documento É Seu Guia Completo</h3>
+                <p style="font-size: 1.1em; margin-top: 15px; line-height: 1.7;">
+                    Você agora tem uma <strong>estratégia baseada em análise comportamental profunda</strong>, 
+                    estruturada em metodologias comprovadas e orientada para resultados comerciais concretos. 
+                    O objetivo é transformar 2026 no ano de consolidação de Antônia Teodoro como 
+                    <strong>referência nacional em saúde mental corporativa preventiva</strong>.
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; padding: 40px; background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); 
+                    border-radius: 20px; color: white; margin-top: 40px;">
+            <h2 style="font-size: 2em; margin-bottom: 15px;">🎯 Estratégia 2026 Pronta</h2>
+            <p style="font-size: 1.2em; line-height: 1.7;">
+                Elaborado por <strong>Giz Marketing Digital</strong><br>
+                Para Antônia Teodoro dos Santos<br>
+                Dezembro 2025
+            </p>
+        </div>
+    </div>
+</body>
+</html>
